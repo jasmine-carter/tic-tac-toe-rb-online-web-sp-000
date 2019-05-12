@@ -35,8 +35,8 @@ def current_player(board)
   end
 end
 
-def move(board, index, current_player)
-board[index] = current_player
+def move(board, index, character)
+board[index] = character
 end
 
 def position_taken?(board, index)
@@ -60,8 +60,7 @@ def turn(board)
   if !valid_move?(board, index)
     turn(board)
   else
-    over?(board)
-    move(board, index, current_player)
+    move(board, index, character)
     puts display_board(board)
   end
 end
