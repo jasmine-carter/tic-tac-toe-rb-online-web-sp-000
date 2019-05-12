@@ -15,6 +15,13 @@ end
 def input_to_index(user_input)
    user_input.to_i - 1
 end
+def current_player(board)
+  if turn_count(board).even?
+    return "X"
+  else
+    return "O"
+  end
+end
 
 def move(board, index, current_player)
 board[index] = current_player
@@ -54,14 +61,6 @@ counter = 0
       end
   end
   return counter
-end
-
-def current_player(board)
-  if turn_count(board).even?
-    return "X"
-  else
-    return "O"
-  end
 end
 
 def full?(board)
