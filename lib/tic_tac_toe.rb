@@ -15,6 +15,7 @@ end
 def input_to_index(user_input)
    user_input.to_i - 1
 end
+
 def current_player(board)
   if turn_count(board).even?
     return "X"
