@@ -60,6 +60,7 @@ def turn(board)
   if !valid_move?(board, index)
     turn(board)
   else
+    valid_move?(board)
     move(board, index, character)
     puts display_board(board)
   end
