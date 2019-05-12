@@ -60,6 +60,7 @@ def turn(board)
   if !valid_move?(board, index)
     turn(board)
   else
+    over?(board)
     move(board, index, current_player)
     puts display_board(board)
   end
